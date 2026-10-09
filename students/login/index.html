@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Login | MyCollege</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="logo">My<span>College</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/students/login">Student Login</a></li>
+          <li><a href="/faculty">Faculty</a></li>
+          <li><a href="/courses">Courses</a></li>
+          <li><a href="/examination/results">Exam Results</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-title">
+    <h1>Student Login</h1>
+    <p>Sign in to the MyCollege student portal</p>
+    <span class="url-badge">URL: /students/login</span>
+  </section>
+
+  <main>
+    <div class="login-box">
+      <div class="login-head">
+        <div class="login-icon"><svg width="44" height="44" viewBox="0 0 24 24" fill="#1e3a8a" aria-hidden="true"><path d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3zm-7 9.2v4L12 20l7-3.8v-4L12 16l-7-3.8z"/></svg></div>
+        <h2>Student Portal</h2>
+        <p class="meta">Sign in with your college credentials</p>
+      </div>
+
+      <!-- Shown instead of the form when a student is already "logged in" -->
+      <div id="already-logged-in" hidden>
+        <p class="alert success">You are signed in as <strong id="current-student"></strong>.</p>
+        <a class="btn full" href="/examination/results">Go to My Results</a>
+        <button type="button" class="btn-outline full" id="logout-here">Log Out</button>
+      </div>
+
+      <p id="login-message" class="alert" hidden></p>
+
+      <form id="login-form" novalidate>
+        <label for="student-id">Username</label>
+        <input type="text" id="student-id" placeholder="Enter your username" autocomplete="off">
+        <p class="field-error" id="id-error"></p>
+
+        <label for="password">Password</label>
+        <div class="password-wrap">
+          <input type="password" id="password" placeholder="Enter your password" autocomplete="off">
+          <button type="button" class="show-pass" id="show-pass">Show</button>
+        </div>
+        <p class="field-error" id="pass-error"></p>
+
+        <div class="login-options">
+          <label class="remember"><input type="checkbox" id="remember"> Remember me</label>
+          <a href="#" id="forgot-link">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn full" id="login-btn">
+          <span class="spinner"></span>
+          <span class="btn-text">Log In</span>
+        </button>
+      </form>
+
+      <p class="demo-note">
+        Demo portal for a college assignment. Passwords are never sent or
+        stored, so please don't use a real one.
+      </p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    &copy; <span id="year">2026</span> MyCollege (fictional) &middot; Created for a URL naming practical assignment
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,491 @@
+/* MyCollege - shared styles for all pages */
+
+:root {
+  --primary: #1e3a8a;
+  --primary-light: #3b5bdb;
+  --accent: #f59e0b;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --border: #e5e7eb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--primary-light);
+}
+
+/* ---------- Header & navigation ---------- */
+
+.site-header {
+  background: var(--primary);
+  color: #fff;
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.logo {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  display: block;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.main-nav a.active {
+  border-bottom: 2px solid var(--accent);
+}
+
+/* ---------- Page layout ---------- */
+
+.hero {
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero h1 {
+  margin: 0 0 10px;
+  font-size: 2.4rem;
+}
+
+.page-title {
+  background: var(--primary-light);
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.page-title h1 {
+  margin: 0;
+}
+
+.page-title p {
+  margin: 6px 0 0;
+  opacity: 0.9;
+}
+
+.url-badge {
+  display: inline-block;
+  margin-top: 10px;
+  background: rgba(0, 0, 0, 0.25);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-family: Consolas, monospace;
+  font-size: 0.9rem;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: var(--primary);
+}
+
+.card .meta {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #1f2937;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  filter: brightness(0.95);
+}
+
+/* ---------- Tables ---------- */
+
+.table-wrap {
+  overflow-x: auto;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 500px;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+th {
+  background: #eef2ff;
+  color: var(--primary);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+.pass {
+  color: #15803d;
+  font-weight: 600;
+}
+
+.fail {
+  color: #b91c1c;
+  font-weight: 600;
+}
+
+/* ---------- Login form ---------- */
+
+.login-box {
+  max-width: 400px;
+  margin: 0 auto;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 30px;
+}
+
+.login-box label {
+  display: block;
+  margin: 14px 0 6px;
+  font-weight: 600;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.login-box {
+  box-shadow: 0 10px 30px rgba(30, 58, 138, 0.12);
+}
+
+.login-head {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.login-head h2 {
+  margin: 6px 0 2px;
+  color: var(--primary);
+}
+
+.login-icon {
+  font-size: 2.4rem;
+}
+
+.login-box input:focus {
+  outline: none;
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 3px rgba(59, 91, 219, 0.2);
+}
+
+.login-box input.invalid {
+  border-color: #dc2626;
+}
+
+.field-error {
+  color: #dc2626;
+  font-size: 0.85rem;
+  margin: 4px 0 0;
+  min-height: 1em;
+}
+
+.password-wrap {
+  position: relative;
+}
+
+.password-wrap input {
+  padding-right: 64px;
+}
+
+.show-pass {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--primary-light);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  font-size: 0.9rem;
+}
+
+.login-box .remember {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  font-weight: normal;
+}
+
+.login-box .remember input {
+  width: auto;
+}
+
+.full {
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.btn-outline {
+  display: block;
+  background: none;
+  border: 1px solid var(--primary-light);
+  color: var(--primary-light);
+  padding: 10px 18px;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Login button states: loading spinner and success */
+#login-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: background 0.3s;
+}
+
+#login-btn:disabled {
+  cursor: wait;
+}
+
+.spinner {
+  display: none;
+  width: 18px;
+  height: 18px;
+  border: 3px solid rgba(0, 0, 0, 0.2);
+  border-top-color: #1f2937;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+#login-btn.loading .spinner {
+  display: inline-block;
+}
+
+#login-btn.success {
+  background: #16a34a;
+  color: #fff;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Shake the form when there is an error */
+.shake {
+  animation: shake 0.4s;
+}
+
+@keyframes shake {
+  25% { transform: translateX(-8px); }
+  50% { transform: translateX(8px); }
+  75% { transform: translateX(-4px); }
+}
+
+.alert {
+  padding: 10px 14px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  background: #eef2ff;
+  border: 1px solid #c7d2fe;
+  color: var(--primary);
+}
+
+.alert.success {
+  background: #dcfce7;
+  border-color: #86efac;
+  color: #166534;
+}
+
+.demo-note {
+  margin: 20px 0 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* ---------- Logged-in student (header chip, results banner) ---------- */
+
+.user-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  padding: 4px 4px 4px 12px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+}
+
+.user-chip button {
+  background: var(--accent);
+  border: none;
+  border-radius: 14px;
+  padding: 4px 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.welcome-banner {
+  background: #dcfce7;
+  border: 1px solid #86efac;
+  color: #166534;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+tr.my-row td {
+  background: #fef9c3;
+  font-weight: 600;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  background: #111827;
+  color: #9ca3af;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 760px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .main-nav {
+    display: none;
+    width: 100%;
+  }
+
+  .main-nav.open {
+    display: block;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+}
+
+.alert.error {
+  background: #fee2e2;
+  border-color: #fca5a5;
+  color: #991b1b;
+}

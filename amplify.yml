@@ -1,0 +1,13 @@
+# AWS Amplify build settings for a plain static website (no build step needed)
+version: 1
+frontend:
+  phases:
+    build:
+      commands:
+        - echo "Static website - nothing to build"
+  artifacts:
+    baseDirectory: /
+    files:
+      - '**/*'
+  cache:
+    paths: []
